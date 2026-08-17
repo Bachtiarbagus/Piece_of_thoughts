@@ -1,16 +1,24 @@
 ---
 title: "Green Hydrogen: Promise, Limits & Reality"
-description: "Notes on where green hydrogen makes sense—and where it may not."
-date: 2026-08-15
+description: "Notes on where green hydrogen makes sense, where it struggles, and why the useful question is often about system fit."
+date: 2026-08-17
 category: "Energy & Climate"
 featured: false
 draft: false
 ---
 
-Hydrogen is often presented as a universal solution for decarbonisation. A more useful question is where its particular physical and economic characteristics make it genuinely valuable.
+> **Working note.** A placeholder for a future long-form essay.
 
-## A working question
+## The promise
 
-Instead of asking whether hydrogen is “the future”, we can ask which applications are difficult to electrify directly and whether hydrogen can solve a specific problem at an acceptable cost.
+Green hydrogen is often presented as a versatile tool for decarbonisation. Its strongest case, however, is likely to be in applications where direct electrification is difficult.
 
-This is a placeholder for a future essay.
+## The limits
+
+Hydrogen production, compression, storage and conversion can involve substantial energy losses. That does not make hydrogen useless; it makes system context important.
+
+## The useful question
+
+Rather than asking whether hydrogen is “the future,” a better question is: **where does hydrogen create more value than the alternatives?**
+
+That question will be explored in the full essay.
