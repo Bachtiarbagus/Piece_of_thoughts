@@ -1,22 +1,78 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
+
 <BaseLayout title="About — The Working Margin">
   <section class="about">
-    <p class="eyebrow">About the publication</p>
-    <h1>Bagus Bachtiar</h1>
+    <p class="eyebrow">About the author</p>
+
+    <h1>
+      Bagus<br />
+      <em>Bachtiar</em>
+    </h1>
+
     <div class="copy">
-      <p><strong>The Working Margin</strong> is a personal publication for writing that sits between professional work, research, learning and everyday observation.</p>
-      <p>I write across <strong>Energy & Climate, Impact, Personal Development, and Essays & Ideas</strong>.</p>
-      <p>The site is not intended to be a conventional CV in disguise. It is a place to document what I am learning, the questions I find worth pursuing, and the ideas that become clearer through writing.</p>
-      <p class="small">Professional background, selected projects and contact details will be added here as the publication develops.</p>
+      <p>
+        I work across energy, sustainability, infrastructure and development.
+        The Working Margin is where I put ideas that don't fit neatly into a
+        slide deck, a project brief or a job description.
+      </p>
+
+      <p>
+        I write about <strong>energy & climate, impact, personal development,
+        and essays & ideas</strong>—sometimes from professional experience,
+        sometimes from research, and sometimes simply because a question
+        refuses to go away.
+      </p>
+
+      <p>
+        The aim is not to present finished answers. It is to make better
+        questions, think in public, and keep a record of what I am learning.
+      </p>
+
+      <div class="links">
+        <a href="https://www.linkedin.com/">LinkedIn ↗</a>
+        <a href="mailto:hello@example.com">Email ↗</a>
+      </div>
     </div>
   </section>
 </BaseLayout>
+
 <style>
-  .about { padding:90px 0 30px; }
-  .about h1 { font-size:clamp(3rem,7vw,5.5rem); margin:15px 0 60px; letter-spacing:-.04em; }
-  .copy { max-width:720px; font-size:1.12rem; }
-  .copy p { margin:0 0 1.7em; }
-  .copy .small { color:var(--muted); font-size:.9rem; margin-top:60px; }
+.about {
+  padding: 90px 0 30px;
+}
+
+.about h1 {
+  font-size: clamp(3.4rem, 8vw, 6rem);
+  letter-spacing: -.05em;
+  line-height: 1.05;
+  margin: 15px 0 65px;
+}
+
+.about h1 em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.copy {
+  max-width: 720px;
+  font-size: 1.12rem;
+}
+
+.copy p {
+  margin: 0 0 1.7em;
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+  margin-top: 55px;
+  font-size: .85rem;
+}
+
+.links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 </style>
