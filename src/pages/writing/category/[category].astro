@@ -3,16 +3,25 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('writing', ({ data }) => !data.draft);
+  const posts = await getCollection(
+    'writing',
+    ({ data }) => !data.draft
+  );
 
-  const categories = [...new Set(posts.map((post) => post.data.category))];
+  const categories = [
+    ...new Set(posts.map(post => post.data.category))
+  ];
 
-  return categories.map((category) => ({
+  return categories.map(category => ({
     params: { category },
     props: {
       posts: posts
-        .filter((post) => post.data.category === category)
-        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+        .filter(post => post.data.category === category)
+        .sort(
+          (a, b) =>
+            b.data.date.valueOf() -
+            a.data.date.valueOf()
+        )
     }
   }));
 }
@@ -25,17 +34,22 @@ const { category } = Astro.params;
   title={`${category} — The Working Margin`}
   description={`Writing by Bagus Bachtiar on ${category}.`}
 >
-  <section class="page-head">
+  <section class="head">
     <p class="eyebrow">Category</p>
+
     <h1>{category}</h1>
-    <p>Writing and working notes in this area.</p>
+
+    <p>
+      Writing and working notes in this area.
+    </p>
   </section>
 
   <section class="list">
-    {posts.map((post) => (
+    {posts.map(post => (
       <article>
         <div class="meta">
-          {post.data.category} · {post.data.date.toLocaleDateString('en-GB', {
+          {post.data.category} ·
+          {post.data.date.toLocaleDateString('en-GB', {
             day: 'numeric',
             month: 'long',
             year: 'numeric'
@@ -55,40 +69,33 @@ const { category } = Astro.params;
 </BaseLayout>
 
 <style>
-  .page-head {
-    padding: 80px 0 50px;
-    max-width: 700px;
-  }
+.head {
+  padding: 80px 0 50px;
+  max-width: 700px;
+}
 
-  .page-head h1 {
-    font-size: clamp(3rem, 7vw, 5rem);
-    margin: 12px 0;
-  }
+.head h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  margin: 12px 0;
+}
 
-  .page-head p:last-child {
-    color: var(--muted);
-    font-size: 1.1rem;
-  }
+.head p:last-child {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
 
-  .list article {
-    max-width: 820px;
-    padding: 35px 0;
-    border-bottom: 1px solid var(--line);
-  }
+.list article {
+  max-width: 850px;
+  padding: 35px 0;
+  border-bottom: 1px solid var(--line);
+}
 
-  .meta {
-    color: var(--muted);
-    font-size: .72rem;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-  }
+.list h2 {
+  font-size: 1.8rem;
+  margin: 9px 0;
+}
 
-  h2 {
-    font-size: 1.8rem;
-    margin: 10px 0;
-  }
-
-  .list p {
-    color: var(--muted);
-  }
+.list p {
+  color: var(--muted);
+}
 </style>
