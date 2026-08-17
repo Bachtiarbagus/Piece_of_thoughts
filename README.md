@@ -1,23 +1,17 @@
-# The Working Margin — v0.2
+# The Working Margin
 
-Personal writing site for Bagus Bachtiar.
+Personal publication by Bagus Bachtiar.
 
-## Writing system
-
-Articles live in `src/content/writing/` as Markdown files. Each article has frontmatter for title, description, date, category, featured and draft. The homepage, archive and category pages update automatically when a new Markdown file is added.
-
-Categories:
+## Sections
 - Energy & Climate
 - Impact
 - Personal Development
 - Essays & Ideas
 
-## Cloudflare
+## Publishing
+Writing is stored as Markdown in `src/content/writing/`. A GitHub commit triggers the Cloudflare deployment.
 
-The site is statically generated into `dist/` and deployed using Cloudflare Workers Static Assets via `wrangler.jsonc`.
-
-## Local development
-
+## Run locally
 ```bash
 npm install
 npm run dev
