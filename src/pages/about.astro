@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="About — The Working Margin">
+  <section class="about">
+    <p class="eyebrow">About the publication</p>
+    <h1>Bagus Bachtiar</h1>
+    <div class="copy">
+      <p><strong>The Working Margin</strong> is a personal publication for writing that sits between professional work, research, learning and everyday observation.</p>
+      <p>I write across <strong>Energy & Climate, Impact, Personal Development, and Essays & Ideas</strong>.</p>
+      <p>The site is not intended to be a conventional CV in disguise. It is a place to document what I am learning, the questions I find worth pursuing, and the ideas that become clearer through writing.</p>
+      <p class="small">Professional background, selected projects and contact details will be added here as the publication develops.</p>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .about { padding:90px 0 30px; }
+  .about h1 { font-size:clamp(3rem,7vw,5.5rem); margin:15px 0 60px; letter-spacing:-.04em; }
+  .copy { max-width:720px; font-size:1.12rem; }
+  .copy p { margin:0 0 1.7em; }
+  .copy .small { color:var(--muted); font-size:.9rem; margin-top:60px; }
+</style>
