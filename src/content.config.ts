@@ -7,7 +7,12 @@ const writing = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    category: z.enum(['Energy & Climate', 'Impact', 'Personal Development', 'Essays & Ideas']),
+    category: z.enum([
+      'Energy & Climate',
+      'Impact',
+      'Personal Development',
+      'Essays & Ideas'
+    ]),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false)
   })
