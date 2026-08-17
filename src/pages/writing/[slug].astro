@@ -3,33 +3,96 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('writing', ({ data }) => !data.draft);
-  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+  const posts = await getCollection(
+    'writing',
+    ({ data }) => !data.draft
+  );
+
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post }
+  }));
 }
 
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
-<BaseLayout title={`${post.data.title} — The Working Margin`} description={post.data.description}>
+
+<BaseLayout
+  title={`${post.data.title} — The Working Margin`}
+  description={post.data.description}
+>
   <article class="post">
+
     <header>
-      <p class="eyebrow">{post.data.category} · {post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+      <p class="eyebrow">
+        {post.data.category} ·
+        {post.data.date.toLocaleDateString('en-GB', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        })}
+      </p>
+
       <h1>{post.data.title}</h1>
+
       <p class="dek">{post.data.description}</p>
     </header>
+
     <div class="article-body">
       <Content />
     </div>
-    <footer class="post-footer">
-      <a href="/writing/">← Back to writing</a>
-    </footer>
+
   </article>
 </BaseLayout>
 
 <style>
-  .post { padding:80px 0 20px; }
-  .post header { max-width:850px; padding-bottom:55px; }
-  .post h1 { font-size:clamp(2.7rem,6vw,5.2rem); letter-spacing:-.035em; margin:16px 0 25px; }
-  .dek { color:var(--muted); font-size:1.25rem; max-width:700px; }
-  .post-footer { max-width:720px; margin-top:60px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+.post {
+  padding: 80px 0 30px;
+}
+
+.post header {
+  max-width: 880px;
+  padding-bottom: 55px;
+}
+
+.post h1 {
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  letter-spacing: -.04em;
+  margin: 15px 0 24px;
+}
+
+.dek {
+  color: var(--muted);
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+.article-body {
+  max-width: 720px;
+  font-size: 1.06rem;
+}
+
+.article-body :global(h2) {
+  font-size: 1.55rem;
+  margin-top: 2.4em;
+}
+
+.article-body :global(blockquote) {
+  margin: 2rem 0;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--accent);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.12rem;
+}
+
+.article-body :global(a) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article-body :global(img) {
+  max-width: 100%;
+  height: auto;
+}
 </style>
