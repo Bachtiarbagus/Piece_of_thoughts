@@ -1,24 +1,36 @@
 ---
 title: "Should We Use More Air Conditioning to Fight Climate Change?"
-description: "The uncomfortable relationship between rising temperatures, cooling demand and energy efficiency."
+description: "An essay on the uncomfortable relationship between rising temperatures, cooling demand, productivity and energy use."
 date: 2026-08-16
 category: "Energy & Climate"
 featured: true
 draft: false
 ---
 
-This is the first published piece in The Working Margin. The full essay will replace this working draft.
+> **Working draft.** This is the first essay to be developed for The Working Margin.
 
-## The question
+## The uncomfortable question
 
-Climate change makes cooling increasingly important for human comfort, productivity and health. But cooling also consumes electricity, and inefficient cooling can increase emissions when electricity is carbon-intensive.
+As temperatures rise, air conditioning becomes more than a matter of comfort. Cooling can protect health, support productivity and make increasingly hot environments habitable.
 
-## The tension
+But cooling also requires energy. Where electricity systems remain carbon-intensive, greater cooling demand can contribute to further emissions.
 
-The interesting question is therefore not simply whether we should use more or less air conditioning. It is whether we can provide more cooling services while using less energy and producing fewer emissions.
+That creates an uncomfortable question: **should we use air conditioning more or less as the climate becomes hotter?**
 
-> Good energy policy is often less about choosing between comfort and sustainability than about changing the system that provides both.
+## The question behind the question
 
-## What comes next
+The answer is unlikely to be a simple instruction to use either more or less air conditioning.
 
-The full essay can examine efficiency standards, building design, electricity-system decarbonisation, behavioural choices and the distributional question of who gets access to cooling.
+The more useful question is whether we can provide the cooling people need while dramatically reducing the energy and emissions required to provide it.
+
+That shifts the discussion toward buildings, appliance efficiency, electricity systems, urban design and behaviour.
+
+## A question worth pursuing
+
+The interesting tension is therefore not simply between comfort and sustainability. It is between different ways of designing the systems that provide comfort.
+
+This is where the full essay will go next: into the evidence on cooling demand, energy efficiency, productivity and climate adaptation.
+
+## Sources
+
+References will be added to the final version.
