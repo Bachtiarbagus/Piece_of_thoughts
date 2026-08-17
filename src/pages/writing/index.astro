@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Writing — The Working Margin">
+  <section class="page-head">
+    <p class="eyebrow">The archive</p>
+    <h1>Writing</h1>
+    <p>Essays, observations and working notes across four areas.</p>
+  </section>
+
+  <div class="categories">
+    <span>Energy & Climate</span>
+    <span>Impact</span>
+    <span>Personal Development</span>
+    <span>Essays & Ideas</span>
+  </div>
+
+  <section class="list">
+    <article>
+      <div class="meta">Energy & Climate · 16 August 2026</div>
+      <h2><a href="/writing/air-conditioning-climate-change/">Should We Use More Air Conditioning to Fight Climate Change?</a></h2>
+      <p>A first essay on the uncomfortable relationship between rising temperatures, cooling demand and energy efficiency.</p>
+    </article>
+    <article class="upcoming">
+      <div class="meta">Energy & Climate · Coming soon</div>
+      <h2>Green Hydrogen: Promise, Limits & Reality</h2>
+      <p>Notes on where green hydrogen makes sense—and where it may not.</p>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-head { padding: 80px 0 50px; max-width: 700px; }
+  .page-head h1 { font-size: clamp(3rem, 7vw, 5rem); margin: 12px 0; }
+  .page-head p:last-child { color: var(--muted); font-size: 1.1rem; }
+  .categories { display:flex; flex-wrap:wrap; gap:10px; padding-bottom: 35px; border-bottom:1px solid var(--line); }
+  .categories span { border:1px solid var(--line); padding:7px 12px; border-radius:999px; font-size:.75rem; }
+  .list article { max-width: 820px; padding: 35px 0; border-bottom:1px solid var(--line); }
+  .meta { color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
+  h2 { font-size: 1.8rem; margin: 10px 0; }
+  .list p { color:var(--muted); }
+  .upcoming { opacity:.65; }
+</style>
